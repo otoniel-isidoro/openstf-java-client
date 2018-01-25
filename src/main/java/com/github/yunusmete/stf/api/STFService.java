@@ -41,7 +41,7 @@ public interface STFService {
    ClaimResponse deleteDeviceBySerial(@Path("serial") String serial);
 
    @POST("/user/devices/{serial}/remoteConnect")
-   RemoteConnectResponse remoteConnectDeviceBySerial(@Path("serial") String serial);
+   RemoteConnectResponse remoteConnectDeviceBySerial(@Path("serial") String serial, @Body DeviceBody body);
 
    @DELETE("/user/devices/{serial}/remoteConnect")
    RemoteConnectResponse remoteDisconnectDeviceBySerial(@Path("serial") String serial);
